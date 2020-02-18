@@ -1,30 +1,20 @@
-
 #include <iostream>
 
 using namespace std;
 
-int main() {
+int main()
+{
+    long long int sum = 0, num, actual_sum, i,n;
 
-    long long int n, i = 0, index;
-    cin>>n;
-    
-    long long int a[n];
+    cin >> n;
 
-    while (i != n-1)
+    actual_sum = (n * (n + 1)) / 2;
+
+    for (i = 0; i < (n - 1); i++)
     {
-        cin>>index;
-        //scanf("%lld",&index);
-        a[index-1] = 1;
-        i++;
+        cin >> num;
+        sum += num;
     }
-
-    for (long long int j = 0 ; j < n; j++)
-    {
-        if (a[j] != 1)
-        {
-            cout<<j+1;
-           break;
-        }
-    }
+    cout << actual_sum - sum;
     return 0;
 }
