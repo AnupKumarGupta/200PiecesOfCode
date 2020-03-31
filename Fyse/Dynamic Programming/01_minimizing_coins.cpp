@@ -29,5 +29,10 @@ int main()
             if (i - coins[j] >= 0)
                 value[i] = min(value[i], value[i - coins[j]] + 1);
     }
-    cout << value[sum];
+    int ans;
+    if (value[sum] > sum)
+        ans = -1;
+    else
+        ans = value[sum];
+    cout << ans;
 }
