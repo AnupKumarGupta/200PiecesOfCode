@@ -4,7 +4,7 @@
 using namespace std;
 
 long find_min_coins(long size, long coin_values[], long total_value) {
-    long* values = (long* ) malloc(total_value * sizeof(total_value));
+    long* values = (long* ) malloc(total_value * sizeof(total_value) +1);
     for (long i = 1; i <= total_value; i++) {
         values[i] = INT32_MAX;
         for (long j = 0; j < size; j++) {
